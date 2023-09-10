@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>CFG Notes App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="notes-column">
+        <h2><img src="assets/notes.png" />Notes</h2>
+        <button class="btn"><img src="assets/edit.png" />Create Notes</button>
+        <div class="notes-container">
+          <!-- <p contenteditable="true" class="input-box"> 
+                    <img src="assets/delete.png"/>
+                </p> -->
+        </div>
+        <!-- <div class="code-input-container">
+          <textarea class="code-input" rows="10" cols="50"></textarea>
+        </div> -->
+      </div>
+      <div class="todo-app-column">
+        <div class="todo-app">
+          <h2><img src="./assets/icon.png" />To Do</h2>
+          <div class="todo-row">
+            <input type="text" id="input-box" placeholder="Add Your Text" />
+            <button onclick="addTask()" class="todo-btn">Add</button>
+          </div>
+          <ul id="todo-list-container">
+            <!-- <li class="checked">Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li> -->
+          </ul>
+        </div>
+      </div>
+      <div class="weather-row"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

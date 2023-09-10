@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #652b9b, #2b9b54, #9ef2ff);
+  color: white;
+  padding-top: 4rem;
+  padding-left: 4rem;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.notes-column,
+.todo-app-column {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 40vw;
+  max-width: 45vw;
+}
+
+.todo-app {
+  width: 100%;
+}
+
+.container h2 {
+  display: flex;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.container h2 img {
+  width: 60px;
+}
+
+.btn {
+  width: 100%;
+}
+
+.container button img {
+  width: 25px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(#9418fd, #571094);
+  color: white;
+  font-size: 16px;
+  outline: 0;
+  border: 0;
+  border-radius: 40px;
+  padding: 15px 25px;
+  margin: 30px 0 20px;
+  cursor: pointer;
+  transition: background 0.5s ease cubic-bezier(0.5, 1, 0.32, 1); /* Add a transition for background */
+}
+
+.btn:hover {
+  /* Change the gradient on hover */
+  background: linear-gradient(#571094, #9418fd);
+}
+
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Add position relative to create a positioning context */
+  width: 100%;
+  min-height: 150px;
+  background: white;
+  color: #333;
+  padding: 20px;
+  margin: 20px 0;
+  outline: none;
+  border-radius: 5px;
+  /* Add relative positioning to create a positioning context for absolute positioning */
+  position: relative;
+}
+
+.input-box img {
+  position: absolute; /* Position the image absolutely within the .input-box */
+  bottom: 15px; /* Position from the bottom */
+  right: 15px; /* Position from the right */
+  width: 25px;
+  cursor: pointer;
+}
+
+.todo-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+  padding: 15px 25px;
+  margin: 30px 0 20px;
+  height: 3.5rem;
+  position: relative;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 14px;
+}
+
+.todo-btn {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background-color: #ff5945;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+  height: 3.5rem;
+  position: absolute; /* Add position absolute for button positioning */
+  right: 0; /* Position the button at the very end of .todo-row */
+}
+
+.todo-list-class {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Add position relative to create a positioning context */
+  width: 100%;
+  /* min-height: 150px; */
+  background: white;
+  color: #333;
+  padding: 20px;
+  margin: 40px 0;
+  outline: none;
+  border-radius: 5px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(assets/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(assets/checked.png);
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+}
+
+ul li span:hover {
+  background: #edeef0;
+}
