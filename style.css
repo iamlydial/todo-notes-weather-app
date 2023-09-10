@@ -6,6 +6,9 @@
 }
 
 .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(135deg, #652b9b, #2b9b54, #9ef2ff);
